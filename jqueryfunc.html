@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Functions</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <Style>
+        .colorClass {
+            color: red;
+        }
+        #toggled {
+            height: 150px;
+            width: 150px;
+            display: block;
+        }
+    </Style>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            
+            $('#addclass').click(function(){
+                $('#p1').addClass('colorClass');
+            });
+            $('#slidetoggle').click(function(){
+                $('#toggled').slideToggle();
+            });
+            $('#append').click(function(){
+                $('#appended').append('jQuery is so fun!')
+            });
+            $('#phide').hide();
+            $('#show').click(function(){
+                $('#phide').show();
+            });
+            $('#text').click(function(){
+                $('#texts').text('Did it!');
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>AddClass</h1>
+    <p id="p1">Click the button to add class 'red' to this paragraph</p>
+    <button id="addclass">AddClass</button>
+    <h1>Slidetoggle</h1>
+    <p>Click the button to slidetoggle a hidden image.</p>
+    <img id="toggled" src="https://uptownpuppies.com/wp-content/themes/mega-theme/images/germanshepherdopennew.jpg">
+    <button id="slidetoggle">Slidetoggle</button>
+    <h1>Append</h1>
+    <p>Click the button to append a new paragraph!</p>
+    <button id="append">Append</button>
+    <p id="appended"></p>
+    <h1>Show</h1>
+    <p>Click the button to show a hidden paragraph</p>
+    <button id="show">Show</button>
+    <p id="phide">This is a hidden paragraph!</p>
+    <h1>Text</h1>
+    <p id="texts">Click the button to change the text</p>
+    <button id="text">Text</button>
+</body>
+</html>
